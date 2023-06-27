@@ -40,7 +40,10 @@ void selection_sort(int *array, size_t size)
 			if (array[min] > array[j])
 				min = j;
 		}
+		if (array[i] > array[min])
+		{
 		swap(&array[min], &array[i]);
 		print_array(array, size);
+		}
 	}
 }
